@@ -22,6 +22,7 @@ public class Chatbot
 	{
 		memesList = new ArrayList<String>();
 		politicalTopicList = new ArrayList<String>();
+		
 	}
 
 	private void buildMemesList()
