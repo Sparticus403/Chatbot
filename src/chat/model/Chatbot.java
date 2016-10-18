@@ -35,12 +35,18 @@ public class Chatbot
 
 	/**
 	 * * Checks the length of the supplied string. Returns false if the supplied
-	 * String is empty or null, otherwise returns true. * @param currentInput
-	 * * @return A true or false based on the length of the supplied String.
+	 * String is empty or null, otherwise returns true. 
+	 * @param currentInput
+	 * @return A true or false based on the length of the supplied String.
 	 */
 	public boolean lengthChecker(String currentInput)
 	{
-		return false;
+		boolean hasLength = false;
+		if(currentInput != null && !currentInput.equals(""))
+		{
+			hasLength = true;
+		}
+		return hasLength;
 	}
 
 	/**
