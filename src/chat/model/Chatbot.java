@@ -39,7 +39,7 @@ public class Chatbot
 		memesList.add("john cena");
 		memesList.add("success kid");
 		memesList.add("bad luck brian");
-		memesList.add("putin");
+		memesList.add("harambe");
 		memesList.add("scumbag steve");
 		memesList.add("doge");
 		memesList.add("cute animals");
@@ -49,7 +49,7 @@ public class Chatbot
 		memesList.add("john cena");
 		memesList.add("success kid");
 		memesList.add("bad luck brian");
-		memesList.add("putin");
+		memesList.add("2016 election");
 		memesList.add("scumbag steve");
 	}
 
@@ -66,6 +66,13 @@ public class Chatbot
 		politicalTopicList.add("Stein");
 		politicalTopicList.add("Johnson");
 		politicalTopicList.add("election");
+		politicalTopicList.add("Trump's wall");
+		politicalTopicList.add("American politics");
+		politicalTopicList.add("liberal");
+		politicalTopicList.add("");
+		politicalTopicList.add("");
+		politicalTopicList.add("");
+		politicalTopicList.add("");
 	}
 
 	/**
