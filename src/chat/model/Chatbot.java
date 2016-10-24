@@ -41,10 +41,31 @@ public class Chatbot
 		memesList.add("bad luck brian");
 		memesList.add("putin");
 		memesList.add("scumbag steve");
+		memesList.add("doge");
+		memesList.add("cute animals");
+		memesList.add("grumpy cat");
+		memesList.add("dat boi");
+		memesList.add("willy wonka");
+		memesList.add("john cena");
+		memesList.add("success kid");
+		memesList.add("bad luck brian");
+		memesList.add("putin");
+		memesList.add("scumbag steve");
 	}
 
 	private void buildPoliticalTopicsList()
 	{
+		politicalTopicList.add("Democrat");
+		politicalTopicList.add("Republican");
+		politicalTopicList.add("11/8/16");
+		politicalTopicList.add("conservative");
+		politicalTopicList.add("Clinton");
+		politicalTopicList.add("Trump");
+		politicalTopicList.add("Kaine");
+		politicalTopicList.add("Pence");
+		politicalTopicList.add("Stein");
+		politicalTopicList.add("Johnson");
+		politicalTopicList.add("election");
 	}
 
 	/**
@@ -132,7 +153,7 @@ public class Chatbot
 	 */
 	public ArrayList<String> getMemesList()
 	{
-		return null;
+		return memesList;
 	}
 
 	/**
