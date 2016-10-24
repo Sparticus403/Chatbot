@@ -120,7 +120,7 @@ public class Chatbot
 	 */
 	public boolean politicalTopicChecker(String currentInput)
 	{
-		return false;
+		boolean isPoliticalTopic = false;
 	}
 
 	/**
