@@ -23,10 +23,24 @@ public class Chatbot
 		memesList = new ArrayList<String>();
 		politicalTopicList = new ArrayList<String>();
 		content = new String("Anything");
+		buildMemesList();
+		buildPoliticalTopicsList();
+		this.userName = userName;
+		this.content = "Something nifty";
 	}
 
 	private void buildMemesList()
-	{
+	{		
+		memesList.add("doge");
+		memesList.add("cute animals");
+		memesList.add("grumpy cat");
+		memesList.add("dat boi");
+		memesList.add("willy wonka");
+		memesList.add("john cena");
+		memesList.add("success kid");
+		memesList.add("bad luck brian");
+		memesList.add("putin");
+		memesList.add("scumbag steve");
 	}
 
 	private void buildPoliticalTopicsList()
@@ -59,7 +73,12 @@ public class Chatbot
 	 */
 	public boolean contentChecker(String currentInput)
 	{
-		return false;
+		boolean hasContent = false;
+		if (currentInput.contains(content))
+		{
+			hasContent = true;
+		}
+		return hasContent;
 	}
 
 	/**
