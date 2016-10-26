@@ -38,6 +38,10 @@ public class ChatbotController
 		{
 			checkedInput += "\nYou know my secret topic!\n";
 		}
+		if(stupidBot.politicalTopicChecker(input))
+		{
+			checkedInput += "\nPolitics\n";
+		}
 		
 		if(checkedInput.length() == 0)
 		{

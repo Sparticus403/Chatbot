@@ -13,6 +13,7 @@ public class Chatbot
 	private ArrayList<String> politicalTopicList;
 	private String userName;
 	private String content;
+	private ArrayList<String> keyboardMashList;
 
 	/**
 	 * * Creates an instance of the Chatbot with the supplied username. * @param
@@ -27,6 +28,8 @@ public class Chatbot
 		buildPoliticalTopicsList();
 		this.userName = userName;
 		this.content = "Something nifty";
+		keyboardMashList = new ArrayList<String>();
+		buildKeyboardMashList();
 	}
 
 	private void buildMemesList()
@@ -72,6 +75,14 @@ public class Chatbot
 		politicalTopicList.add("");
 		politicalTopicList.add("");
 		politicalTopicList.add("");
+	}
+	
+	private void buildKeyboardMashList()
+	{
+		keyboardMashList.add("sdf");
+		keyboardMashList.add("dfg");
+		keyboardMashList.add("cvb");
+		keyboardMashList.add(",./");
 	}
 
 	/**
@@ -121,9 +132,12 @@ public class Chatbot
 	{
 		boolean hasPoliticalTopic = false;
 		
-		if(politicalTopicList.contains(currentInput))
-		{
-			hasPoliticalTopic = true;
+		for(int index = 0; index < politicalTopicList.size(); index ++)
+		{	
+			if(currentInput.equals(politicalTopicList.get(index)))
+			{
+				hasPoliticalTopic = true;
+			}
 		}
 		
 		return hasPoliticalTopic;
@@ -150,6 +164,21 @@ public class Chatbot
 		
 		}
 		return isMeme;
+	}
+	
+	public boolean keyboardMashChecker(String currentInput)
+	{
+		boolean isKeyMash = false;
+		
+		for (int index = 0; index< keyboardMashList.size(); index ++)
+		{
+			if(currentInput.equalsIgnoreCase(keyboardMashList.get(index)))
+			{
+				isKeyMash = true;
+			}
+		}
+		
+		return isKeyMash;
 	}
 
 	/**
@@ -186,6 +215,11 @@ public class Chatbot
 	public ArrayList<String> getPoliticalTopicList()
 	{
 		return politicalTopicList;
+	}
+	
+	public ArrayList<String> getKeyboardMashList()
+	{
+		return keyboardMashList;
 	}
 
 	/**
