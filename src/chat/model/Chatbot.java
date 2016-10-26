@@ -40,7 +40,7 @@ public class Chatbot
 		memesList.add("success kid");
 		memesList.add("bad luck brian");
 		memesList.add("harambe");
-		memesList.add("scumbag steve");
+		memesList.add("true story");
 		memesList.add("doge");
 		memesList.add("cute animals");
 		memesList.add("grumpy cat");
@@ -120,7 +120,9 @@ public class Chatbot
 	 */
 	public boolean politicalTopicChecker(String currentInput)
 	{
-		boolean isPoliticalTopic = false;
+		boolean hasPoliticalTopic = false;
+		
+		return hasPoliticalTopic;
 	}
 
 	/**
@@ -142,7 +144,7 @@ public class Chatbot
 	 */
 	public String getUserName()
 	{
-		return null;
+		return userName;
 	}
 
 	/**
