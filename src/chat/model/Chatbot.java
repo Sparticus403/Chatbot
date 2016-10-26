@@ -48,9 +48,8 @@ public class Chatbot
 		memesList.add("willy wonka");
 		memesList.add("john cena");
 		memesList.add("success kid");
-		memesList.add("bad luck brian");
-		memesList.add("2016 election");
-		memesList.add("scumbag steve");
+		memesList.add("john cena");
+		memesList.add("success kid");
 	}
 
 	private void buildPoliticalTopicsList()
@@ -69,7 +68,7 @@ public class Chatbot
 		politicalTopicList.add("Trump's wall");
 		politicalTopicList.add("American politics");
 		politicalTopicList.add("liberal");
-		politicalTopicList.add("");
+		politicalTopicList.add("Hillary");
 		politicalTopicList.add("");
 		politicalTopicList.add("");
 		politicalTopicList.add("");
@@ -122,6 +121,11 @@ public class Chatbot
 	{
 		boolean hasPoliticalTopic = false;
 		
+		if(politicalTopicList.contains(currentInput))
+		{
+			hasPoliticalTopic = true;
+		}
+		
 		return hasPoliticalTopic;
 	}
 
@@ -135,7 +139,17 @@ public class Chatbot
 	 */
 	public boolean memeChecker(String currentInput)
 	{
-		return false;
+		boolean isMeme = false;
+		
+		for ( int index = 0; index < memesList.size(); index ++)
+		{
+			if(currentInput.equalsIgnoreCase(memesList.get(index)))
+			{
+				isMeme = true;
+			}
+		
+		}
+		return isMeme;
 	}
 
 	/**
