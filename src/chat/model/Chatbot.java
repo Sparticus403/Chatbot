@@ -104,7 +104,7 @@ public class Chatbot
 	}
 
 	/**
-	 * * Checks if the supplied String matches the content area for this Chatbot
+	 * Checks if the supplied String matches the content area for this Chatbot
 	 * instance.
 	 * 
 	 * @param currentInput
@@ -114,7 +114,8 @@ public class Chatbot
 	public boolean contentChecker(String currentInput)
 	{
 		boolean hasContent = false;
-		if (currentInput.contains(content))
+		
+		if (currentInput.toLowerCase().contains(content.toLowerCase()))
 		{
 			hasContent = true;
 		}
@@ -122,7 +123,7 @@ public class Chatbot
 	}
 
 	/**
-	 * * Checks if supplied String matches ANY of the topics in the
+	 * Checks if supplied String matches ANY of the topics in the
 	 * politicalTopicsList. Returns true if it does find a match and false if it
 	 * does not match.
 	 * 
@@ -146,7 +147,7 @@ public class Chatbot
 	}
 
 	/**
-	 * * Checks to see that the supplied String value is in the current
+	 * Checks to see that the supplied String value is in the current
 	 * memesList variable.
 	 * 
 	 * @param currentInput
