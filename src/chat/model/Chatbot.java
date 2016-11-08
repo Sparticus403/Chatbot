@@ -14,6 +14,7 @@ public class Chatbot
 	private String userName;
 	private String content;
 	private ArrayList<String> keyboardMashList;
+	private ArrayList<String> HTMLList;
 	private String quit;
 
 	/**
@@ -31,6 +32,7 @@ public class Chatbot
 		this.content = "Something nifty";
 		keyboardMashList = new ArrayList<String>();
 		buildKeyboardMashList();
+		buildHTMLList();
 		this.quit = "quit";
 	}
 
@@ -85,6 +87,14 @@ public class Chatbot
 		keyboardMashList.add("dfg");
 		keyboardMashList.add("cvb");
 		keyboardMashList.add(",./");
+	}
+	
+	private void buildHTMLList()
+	{
+		HTMLList.add("<B> </B>");
+		HTMLList.add("");
+		HTMLList.add("");
+		HTMLList.add("");
 	}
 
 	/**

@@ -3,12 +3,12 @@ package chat.controller;
 import chat.model.Chatbot;
 import chat.view.ChatViewer;
 
-public class ChatbotController
+public class ChatController
 {
 	private Chatbot stupidBot;
 	private ChatViewer display;
 
-	public ChatbotController()
+	public ChatController()
 	{
 		stupidBot = new Chatbot("wall-e");
 		display = new ChatViewer();
