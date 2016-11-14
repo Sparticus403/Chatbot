@@ -198,9 +198,12 @@ public class Chatbot
 	{
 		boolean isHTML = false;
 		
-		if (currentInput.equalsIgnoreCase(HTMLList.get(index)))
+		for (int index = 0; index< HTMLList.size(); index++)
 		{
-			isHTML = true;
+			if (currentInput.equalsIgnoreCase(HTMLList.get(index)))
+			{
+				isHTML = true;
+			}
 		}
 	}
 	
