@@ -1,17 +1,19 @@
 package chat.controller;
 
 import chat.model.Chatbot;
-import chat.view.ChatViewer;
+import chat.view.*;
 
 public class ChatController
 {
 	private Chatbot stupidBot;
 	private ChatViewer display;
+	private ChatFrame appFrame;
 
 	public ChatController()
 	{
 		stupidBot = new Chatbot("wall-e");
 		display = new ChatViewer();
+		appFrame = new ChatFrame(this);
 	}
 	
 	public void start()
@@ -24,7 +26,18 @@ public class ChatController
 			response = display.collectResponse("Oh, you want to talk about " + response + " ? Tell me more.");
 			
 		}
-
+		
+		getBaseFrame();
+		getChatbot();
+	}
+	public ChatFrame getBaseFrame()
+	{
+		return appFrame;
+	}
+	
+	public Chatbot getChatbot()
+	{
+		return stupidBot;
 	}
 	
 	private String useChatBotCheckers(String input)

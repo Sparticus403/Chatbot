@@ -92,9 +92,9 @@ public class Chatbot
 	private void buildHTMLList()
 	{
 		HTMLList.add("<B> </B>");
-		HTMLList.add("");
-		HTMLList.add("");
-		HTMLList.add("");
+		HTMLList.add("<I> sdadas </i>");
+		HTMLList.add("<P>");
+		HTMLList.add("<A HREF=\"sdfs.html\"> </a>");
 	}
 
 	/**
@@ -193,6 +193,17 @@ public class Chatbot
 		
 		return isKeyMash;
 	}
+	
+	public boolean HTMLChecker(String currentInput)
+	{
+		boolean isHTML = false;
+		
+		if (currentInput.equalsIgnoreCase(HTMLList.get(index)))
+		{
+			isHTML = true;
+		}
+	}
+	
 	public boolean quitChecker(String currentInput)
 	{
 		boolean hasQuit = false;
