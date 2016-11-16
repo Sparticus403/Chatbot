@@ -221,8 +221,8 @@ public class Chatbot
 	}
 
 	/**
-	 * * Returns the username of this Chatbot instance. * @return The username
-	 * of the Chatbot.
+	 * Returns the username of this Chatbot instance. 
+	 * @return The username of the Chatbot.
 	 */
 	public String getUserName()
 	{
