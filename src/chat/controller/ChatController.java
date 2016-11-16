@@ -40,7 +40,7 @@ public class ChatController
 		return stupidBot;
 	}
 	
-	private String useChatBotCheckers(String input)
+	public String useChatBotCheckers(String input)
 	{
 		String checkedInput = "";
 		if(stupidBot.memeChecker(input))
@@ -56,7 +56,7 @@ public class ChatController
 			checkedInput += "\nPolitics\n";
 		}
 		
-		if(checkedInput.length() == 0)
+		if(!stupidBot.lengthChecker(checkedInput))
 		{
 			checkedInput = "I have no idea what you mean about " + input;
 		}
@@ -67,4 +67,5 @@ public class ChatController
 		}
 		return checkedInput;
 	}
+	
 }

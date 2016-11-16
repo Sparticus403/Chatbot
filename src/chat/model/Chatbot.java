@@ -14,7 +14,7 @@ public class Chatbot
 	private String userName;
 	private String content;
 	private ArrayList<String> keyboardMashList;
-	private ArrayList<String> HTMLList;
+	private ArrayList<String> inputHTMLList;
 	private String quit;
 
 	/**
@@ -32,7 +32,8 @@ public class Chatbot
 		this.content = "Something nifty";
 		keyboardMashList = new ArrayList<String>();
 		buildKeyboardMashList();
-		buildHTMLList();
+		inputHTMLList = new ArrayList<String>();
+		buildInputHTMLList();
 		this.quit = "quit";
 	}
 
@@ -89,12 +90,12 @@ public class Chatbot
 		keyboardMashList.add(",./");
 	}
 	
-	private void buildHTMLList()
+	private void buildInputHTMLList()
 	{
-		HTMLList.add("<B> </B>");
-		HTMLList.add("<I> sdadas </i>");
-		HTMLList.add("<P>");
-		HTMLList.add("<A HREF=\"sdfs.html\"> </a>");
+		inputHTMLList.add("<B> </B>");
+		inputHTMLList.add("<I> sdadas </i>");
+		inputHTMLList.add("<P>");
+		inputHTMLList.add("<A HREF=\"sdfs.html\"> </a>");
 	}
 
 	/**
@@ -183,7 +184,7 @@ public class Chatbot
 	{
 		boolean isKeyMash = false;
 		
-		for (int index = 0; index< keyboardMashList.size(); index ++)
+		for (int index = 0; index < keyboardMashList.size(); index ++)
 		{
 			if(currentInput.equalsIgnoreCase(keyboardMashList.get(index)))
 			{
@@ -194,13 +195,13 @@ public class Chatbot
 		return isKeyMash;
 	}
 	
-	public boolean HTMLChecker(String currentInput)
+	public boolean inputHTMLChecker(String currentInput)
 	{
 		boolean isHTML = false;
 		
-		for (int index = 0; index< HTMLList.size(); index++)
+		for (int index = 0; index < inputHTMLList.size(); index++)
 		{
-			if (currentInput.equalsIgnoreCase(HTMLList.get(index)))
+			if (currentInput.equalsIgnoreCase(inputHTMLList.get(index)))
 			{
 				isHTML = true;
 			}
