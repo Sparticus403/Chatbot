@@ -18,14 +18,7 @@ public class ChatController
 	
 	public void start()
 	{
-		String response = display.collectResponse("What do you want to talk about?");
 		
-		while(stupidBot.lengthChecker(response))
-		{
-			display.displayMessage(useChatBotCheckers(response));
-			response = display.collectResponse("Oh, you want to talk about " + response + " ? Tell me more.");
-			
-		}
 		
 		getBaseFrame();
 		getChatbot();
@@ -44,32 +37,40 @@ public class ChatController
 	public String useChatBotCheckers(String input)
 	{
 		String checkedInput = "";
-		if(stupidBot.memeChecker(input))
+		if(!stupidBot.quitChecker(input))
 		{
-			checkedInput += "\nYou like memes!\n";
-		}
-		if(stupidBot.contentChecker(input))
-		{
-			checkedInput += "\nYou know my secret topic!\n";
-		}
-		if(stupidBot.politicalTopicChecker(input))
-		{
-			checkedInput += "\nPolitics\n";
-		}
+			if(stupidBot.memeChecker(input))
+			{
+				checkedInput += "\nYou like memes!\n";
+			}
+			if(stupidBot.contentChecker(input))
+			{
+				checkedInput += "\nYou know my secret topic!\n";
+			}
+			if(stupidBot.politicalTopicChecker(input))
+			{
+				checkedInput += "\nPolitics\n";
+			}
 		
-		if(!stupidBot.lengthChecker(checkedInput))
-		{
-			checkedInput = "I have no idea what you mean about " + input;
-		}
+			if(!stupidBot.lengthChecker(checkedInput))
+			{
+				checkedInput = "I have no idea what you mean about " + input;
+			}
 		
-		if(stupidBot.quitChecker(input))
+//			if(stupidBot.quitChecker(input))
+//			{
+//				System.exit(0);
+//			}
+			int canBeRandom = (int) (Math.random() * 2);
+			if(canBeRandom % 7 == 0)
+			{
+				checkedInput += randomTopicGenerator();
+			}
+		}
+		else
 		{
+			display.displayMessage("Thanks for chatting! Talk to you soon");
 			System.exit(0);
-		}
-		int canBeRandom = (int) (Math.random() * 2);
-		if(canBeRandom % 7 == 0)
-		{
-			checkedInput += randomTopicGenerator();
 		}
 		return checkedInput;
 	}

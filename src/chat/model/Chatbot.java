@@ -77,7 +77,7 @@ public class Chatbot
 		politicalTopicList.add("American politics");
 		politicalTopicList.add("liberal");
 		politicalTopicList.add("Hillary");
-		politicalTopicList.add("");
+		politicalTopicList.add("Something political");
 		politicalTopicList.add("");
 		politicalTopicList.add("");
 	}
@@ -90,13 +90,13 @@ public class Chatbot
 		keyboardMashList.add(",./");
 	}
 	
-	private void buildInputHTMLList()
-	{
-		inputHTMLList.add("<B> </B>");
-		inputHTMLList.add("<I> sdadas </i>");
-		inputHTMLList.add("<P>");
-		inputHTMLList.add("<A HREF=\"sdfs.html\"> </a>");
-	}
+//	private void buildInputHTMLList()
+//	{
+//		inputHTMLList.add("<B> </B>");
+//		inputHTMLList.add("<I> sdadas </i>");
+//		inputHTMLList.add("<P>");
+//		inputHTMLList.add("<A HREF=\"sdfs.html\"> </a>");
+//	}
 
 	/**
 	 * * Checks the length of the supplied string. Returns false if the supplied
@@ -195,18 +195,18 @@ public class Chatbot
 		return isKeyMash;
 	}
 	
-	public boolean inputHTMLChecker(String currentInput)
-	{
-		boolean isHTML = false;
-		
-		for (int index = 0; index < inputHTMLList.size(); index++)
-		{
-			if (currentInput.equalsIgnoreCase(inputHTMLList.get(index)))
-			{
-				isHTML = true;
-			}
-		}
-	}
+//	public boolean inputHTMLChecker(String currentInput)
+//	{
+//		boolean isHTML = false;
+//		
+//		for (int index = 0; index < inputHTMLList.size(); index++)
+//		{
+//			if (currentInput.equalsIgnoreCase(inputHTMLList.get(index)))
+//			{
+//				isHTML = true;
+//			}
+//		}
+//	}
 	
 	public boolean quitChecker(String currentInput)
 	{
@@ -230,8 +230,8 @@ public class Chatbot
 	}
 
 	/**
-	 * * Returns the content area for this Chatbot instance. * @return The
-	 * content area for this Chatbot instance.
+	 * Returns the content area for this Chatbot instance. 
+	 * @return The content area for this Chatbot instance.
 	 */
 	public String getContent()
 	{
@@ -239,8 +239,8 @@ public class Chatbot
 	}
 
 	/**
-	 * * Getter method for the memesList object. * @return The reference to the
-	 * meme list.
+	 * Getter method for the memesList object. 
+	 * @return The reference to the meme list.
 	 */
 	public ArrayList<String> getMemesList()
 	{
@@ -248,8 +248,8 @@ public class Chatbot
 	}
 
 	/**
-	 * * Getter method for the politicalTopicList object. * @return The
-	 * reference to the political topic list.
+	 * Getter method for the politicalTopicList object. 
+	 * @return The reference to the political topic list.
 	 */
 	public ArrayList<String> getPoliticalTopicList()
 	{
