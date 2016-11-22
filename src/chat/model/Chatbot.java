@@ -14,7 +14,8 @@ public class Chatbot
 	private String userName;
 	private String content;
 	private ArrayList<String> keyboardMashList;
-	private ArrayList<String> inputHTMLList;
+//	private ArrayList<String> inputHTMLList;
+//	private ArrayList<String> twitterList;
 	private String quit;
 
 	/**
@@ -32,8 +33,9 @@ public class Chatbot
 		this.content = "Something nifty";
 		keyboardMashList = new ArrayList<String>();
 		buildKeyboardMashList();
-		inputHTMLList = new ArrayList<String>();
-		buildInputHTMLList();
+//		inputHTMLList = new ArrayList<String>();
+//		buildInputHTMLList();
+//		buildTwitterList();
 		this.quit = "quit";
 	}
 
@@ -78,8 +80,8 @@ public class Chatbot
 		politicalTopicList.add("liberal");
 		politicalTopicList.add("Hillary");
 		politicalTopicList.add("Something political");
-		politicalTopicList.add("");
-		politicalTopicList.add("");
+		politicalTopicList.add("Something else political");
+		politicalTopicList.add("Last political message");
 	}
 	
 	private void buildKeyboardMashList()
@@ -96,6 +98,12 @@ public class Chatbot
 //		inputHTMLList.add("<I> sdadas </i>");
 //		inputHTMLList.add("<P>");
 //		inputHTMLList.add("<A HREF=\"sdfs.html\"> </a>");
+//	}
+	
+//	private void buildTwitterList()
+//	{
+//		twitterList.add("#dw35 f");
+//		twitterList.add("@d4d sretsf");
 //	}
 
 	/**
@@ -195,18 +203,32 @@ public class Chatbot
 		return isKeyMash;
 	}
 	
-//	public boolean inputHTMLChecker(String currentInput)
+//	public boolean twitterChecker(String currentInput)
 //	{
-//		boolean isHTML = false;
+//		boolean isTweet = false;
 //		
-//		for (int index = 0; index < inputHTMLList.size(); index++)
+//		for(int index = 0; index < twitterList.size(); index ++)
 //		{
-//			if (currentInput.equalsIgnoreCase(inputHTMLList.get(index)))
+//			if(currentInput.equalsIgnoreCase(twitterList.get(index)))
 //			{
-//				isHTML = true;
+//				isTweet = true;
 //			}
 //		}
+//		
+//		return isTweet;
 //	}
+	
+	public boolean inputHTMLChecker(String currentInput)
+	{
+		boolean isHTML = false;
+				
+		if(currentInput.IndexOf("<" , ">" , "</" , ">"))
+		{
+			isHTML = true;
+		}
+		
+		return isHTML;
+	}
 	
 	public boolean quitChecker(String currentInput)
 	{
