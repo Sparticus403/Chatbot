@@ -203,33 +203,31 @@ public class Chatbot
 		return isKeyMash;
 	}
 	
-//	public boolean twitterChecker(String currentInput)
-//	{
-//		boolean isTweet = false;
-//		
-//		for(int index = 0; index < twitterList.size(); index ++)
-//		{
-//			if(currentInput.equalsIgnoreCase(twitterList.get(index)))
-//			{
-//				isTweet = true;
-//			}
-//		}
-//		
-//		return isTweet;
-//	}
+	public boolean twitterChecker(String currentInput)
+	{
+		boolean isTweet = false;
+		if(currentInput.substring(0).equalsIgnoreCase("#dw35 f") || currentInput.substring(0).equalsIgnoreCase("@d4d sretsf "))
+		{
+			isTweet = true;
+		}
+		
+		return isTweet;
+	}
 	
 	public boolean inputHTMLChecker(String currentInput)
 	{
 		boolean isHTML = false;
-				
-		if(currentInput.IndexOf("<" , ">" , "</" , ">"))
-		{
-			isHTML = true;
-		}
 		
+		if(currentInput.indexOf("<") == 0 && currentInput.indexOf(">") == 2)
+		{
+			if(currentInput.indexOf("B") == 1 || currentInput.indexOf("I") == 1)
+			{
+				isHTML = true;
+			}
+		}
 		return isHTML;
 	}
-	
+		
 	public boolean quitChecker(String currentInput)
 	{
 		boolean hasQuit = false;
