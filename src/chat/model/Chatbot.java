@@ -218,12 +218,28 @@ public class Chatbot
 	{
 		boolean isHTML = false;
 		
-		if(currentInput.indexOf("<") == 0 && currentInput.indexOf(">") == 2)
+		if(currentInput.indexOf("<") == 0 && currentInput.indexOf(">") >= 2)
 		{
-			if(currentInput.indexOf("B") == 1 || currentInput.indexOf("I") == 1)
+			if(currentInput.indexOf("B") == 1 && currentInput.indexOf("</B>") > 1)
 			{
 				isHTML = true;
 			}
+			if(currentInput.indexOf("I") == 1 && currentInput.indexOf("</i>") > 1)
+			{
+				isHTML = true;
+			}
+			if(currentInput.indexOf("P") == 1)
+			{
+				isHTML = true;
+			}
+			if(currentInput.indexOf("A") == 1 && currentInput.indexOf("</a>") > 1)
+			{
+				if(currentInput.indexOf("HREF") == 3)
+				{
+					isHTML = true;
+				}
+			}
+			
 		}
 		return isHTML;
 	}
