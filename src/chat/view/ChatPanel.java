@@ -14,6 +14,7 @@ public class ChatPanel extends JPanel
 	private JTextField chatField;
 	private JButton chatButton;
 	private JRadioButton chatRadioButton;
+	private JScrollPane chatScroll;
 	
 	public ChatPanel(ChatController baseController)
 	{
@@ -25,6 +26,7 @@ public class ChatPanel extends JPanel
 		chatField = new JTextField(25);
 		chatButton = new JButton("Chat with the bot");
 		chatRadioButton = new JRadioButton();
+		chatScroll = new JScrollPane();
 		
 		setupChatDisplay();
 		setupPanel();
@@ -47,6 +49,7 @@ public class ChatPanel extends JPanel
 		this.add(chatDisplay);
 		this.add(chatField);
 		this.add(chatRadioButton);
+		this.add(chatScroll);
 	}
 	
 	private void setupLayout()
