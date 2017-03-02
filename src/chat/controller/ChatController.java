@@ -24,6 +24,7 @@ public class ChatController
 		getChatbot();
 		randomTopicGenerator();
 	}
+	
 	public ChatFrame getBaseFrame()
 	{
 		return appFrame;
@@ -108,6 +109,12 @@ public class ChatController
 			break;
 		}
 		return randomTopic;
+	}
+	
+	public void handleErrors(Exception currentException)
+	{
+		display.displayMessage("An error has occurred. Details provided next.");
+		display.displayMessage(currentException.getMessage());
 	}
 	
 }
