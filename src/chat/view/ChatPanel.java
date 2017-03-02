@@ -60,6 +60,7 @@ public class ChatPanel extends JPanel
 		this.add(chatField);
 		this.add(chatRadioButton);
 		this.add(chatScroll);
+		this.setSize(900, 600);
 		
 		this.add(saveChat);
 		this.add(loadChat);
@@ -69,14 +70,22 @@ public class ChatPanel extends JPanel
 	
 	private void setupLayout()
 	{
-		baseLayout.putConstraint(SpringLayout.WEST, chatButton, 50, SpringLayout.WEST, this);
-		baseLayout.putConstraint(SpringLayout.SOUTH, chatButton, -92, SpringLayout.SOUTH, this);
-		baseLayout.putConstraint(SpringLayout.NORTH, chatField, 7, SpringLayout.SOUTH, chatButton);
-		baseLayout.putConstraint(SpringLayout.WEST, chatField, 0, SpringLayout.WEST, chatButton);
-		baseLayout.putConstraint(SpringLayout.WEST, chatDisplay, 0, SpringLayout.WEST, chatButton);
-		baseLayout.putConstraint(SpringLayout.SOUTH, chatDisplay, -24, SpringLayout.NORTH, chatButton);
+		baseLayout.putConstraint(SpringLayout.WEST, chatDisplay, 300, SpringLayout.WEST, this);
+		baseLayout.putConstraint(SpringLayout.SOUTH, chatDisplay, -52, SpringLayout.NORTH, chatField);
+		baseLayout.putConstraint(SpringLayout.WEST, chatField, 0, SpringLayout.WEST, chatDisplay);
+		baseLayout.putConstraint(SpringLayout.SOUTH, chatField, -167, SpringLayout.SOUTH, this);
+		baseLayout.putConstraint(SpringLayout.SOUTH, chatButton, -6, SpringLayout.NORTH, chatField);
+		baseLayout.putConstraint(SpringLayout.WEST, chatButton, 6, SpringLayout.EAST, chatRadioButton);
 		baseLayout.putConstraint(SpringLayout.NORTH, chatRadioButton, 0, SpringLayout.NORTH, chatButton);
-		baseLayout.putConstraint(SpringLayout.WEST, chatRadioButton, 8, SpringLayout.EAST, chatButton);
+		baseLayout.putConstraint(SpringLayout.WEST, chatRadioButton, 0, SpringLayout.WEST, chatDisplay);
+		baseLayout.putConstraint(SpringLayout.NORTH, saveChat, 0, SpringLayout.NORTH, chatButton);
+		baseLayout.putConstraint(SpringLayout.EAST, saveChat, 0, SpringLayout.EAST, chatDisplay);
+		baseLayout.putConstraint(SpringLayout.NORTH, loadChat, 6, SpringLayout.SOUTH, chatField);
+		baseLayout.putConstraint(SpringLayout.WEST, loadChat, 0, SpringLayout.WEST, chatDisplay);
+		baseLayout.putConstraint(SpringLayout.NORTH, searchTwitter, 6, SpringLayout.SOUTH, chatField);
+		baseLayout.putConstraint(SpringLayout.EAST, searchTwitter, 0, SpringLayout.EAST, chatDisplay);
+		baseLayout.putConstraint(SpringLayout.NORTH, sendTweet, 6, SpringLayout.SOUTH, searchTwitter);
+		baseLayout.putConstraint(SpringLayout.EAST, sendTweet, 0, SpringLayout.EAST, chatDisplay);
 	}
 	
 	private void setupListeners()
