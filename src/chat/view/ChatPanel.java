@@ -16,6 +16,11 @@ public class ChatPanel extends JPanel
 	private JRadioButton chatRadioButton;
 	private JScrollPane chatScroll;
 	
+	private JButton saveChat;
+	private JButton searchTwitter;
+	private JButton loadChat;
+	private JButton sendTweet;
+	
 	public ChatPanel(ChatController baseController)
 	{
 		super();
@@ -27,6 +32,11 @@ public class ChatPanel extends JPanel
 		chatButton = new JButton("Chat with the bot");
 		chatRadioButton = new JRadioButton();
 		chatScroll = new JScrollPane();
+		
+		saveChat = new JButton("Save Chat");
+		loadChat = new JButton("Load Chat");
+		searchTwitter = new JButton("Search Twitter");
+		sendTweet = new JButton("Send Tweet");
 		
 		setupChatDisplay();
 		setupPanel();
@@ -50,6 +60,11 @@ public class ChatPanel extends JPanel
 		this.add(chatField);
 		this.add(chatRadioButton);
 		this.add(chatScroll);
+		
+		this.add(saveChat);
+		this.add(loadChat);
+		this.add(searchTwitter);
+		this.add(sendTweet);
 	}
 	
 	private void setupLayout()
