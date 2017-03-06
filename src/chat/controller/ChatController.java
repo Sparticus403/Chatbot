@@ -2,18 +2,21 @@ package chat.controller;
 
 import chat.model.Chatbot;
 import chat.view.*;
+import chat.model.CTECTwitter;
 
 public class ChatController
 {
 	private Chatbot stupidBot;
 	private ChatViewer display;
 	private ChatFrame appFrame;
+	private CTECTwitter twitterBot;
 
 	public ChatController()
 	{
 		stupidBot = new Chatbot("wall-e");
 		display = new ChatViewer();
 		appFrame = new ChatFrame(this);
+		twitterBot = new CTECTwitter(this);
 	}
 	
 	public void start()
@@ -117,4 +120,13 @@ public class ChatController
 		display.displayMessage(currentException.getMessage());
 	}
 	
+	public void useTwitter(String text)
+	{
+		twitterBot.sendTweet(text);
+	}
+	
+//	public ChatbotViewer getPopup()
+//	{
+//		return display;
+//	}
 }

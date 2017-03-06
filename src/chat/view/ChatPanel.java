@@ -114,23 +114,30 @@ public class ChatPanel extends JPanel
 				});
 		
 		saveChatButton.addActionListener(new ActionListener()
-				{
+		{
 			public void actionPerformed(ActionEvent click)
 			{
 				String fileName = chatField.getText();
 				
 				FileController.saveFile(baseController, fileName, chatDisplay.getText());
 			}
-				});
+		});
 		
 		loadChatButton.addActionListener(new ActionListener()
-				{
+		{
 			public void actionPerformed(ActionEvent click)
 			{
 				String fileName = chatField.getText() + ".txt";
 				String saved = FileController.readFile(baseController, fileName);
 				chatDisplay.setText(saved);
 			}
-				});
+		});
+		sendTweet.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				baseController.useTwitter(chatField.getText());
+			}
+		});
 	}
 }
