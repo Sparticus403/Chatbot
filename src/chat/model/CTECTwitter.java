@@ -39,9 +39,9 @@ public class CTECTwitter
 		}
 	}
 	
-	private void createIgnoredWordList()
+	private String [] createIgnoredWordArray()
 	{
-		
+		return null;
 	}
 	
 	private void collectTweets(String username)
@@ -49,7 +49,7 @@ public class CTECTwitter
 		
 	}
 	
-	public String getMostCommonWord()
+	public String getMostCommonWord(String user)
 	{
 		return null;
 	}

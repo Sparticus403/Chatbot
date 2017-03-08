@@ -129,4 +129,13 @@ public class ChatController
 //	{
 //		return display;
 //	}
+	
+	public String searchTwitterUser(String usernameToSearch)
+	{
+		String searchResults = "The most popular word by user: " + usernameToSearch + ", is";
+		searchResults += twitterBot.getMostCommonWord(usernameToSearch);
+		
+		return searchResults;
+	}
+	
 }
