@@ -159,7 +159,8 @@ public class CTECTwitter
 			{
 				if(tweetedWords.get(index).equalsIgnoreCase(tweetedWords.get(searched)) && !tweetedWords.get(index).equals(mostPopular))
 				{
-					popularCount++;
+					//popularCount++;
+					currentPopularity++;
 				}
 			}
 			if(currentPopularity > popularCount)
@@ -197,7 +198,7 @@ public class CTECTwitter
 		
 		Query query = new Query("Home");
 		query.setCount(100);
-		query.setGeoCode(new GeoLocation(40.597445, -111.791729), 5, Query.KILOMETERS);
+		query.setGeoCode(new GeoLocation(40.597445, -111.791729), 10, Query.KILOMETERS);
 		query.setSince("2016-1-1");
 		try
 		{
@@ -214,4 +215,16 @@ public class CTECTwitter
 		}
 		return results;
 	}
+	
+//	private void RemoveMentions()
+//	{
+//		for(int index = 0; index < wordList.size(); index++)
+//		{
+//			if(wordList.get(index).subString(0,1).equals("@"))
+//			{
+//				wordList.remove(index);
+//				index--;
+//			}
+//		}
+//	}
 }

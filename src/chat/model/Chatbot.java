@@ -54,12 +54,12 @@ public class Chatbot
 		memesList.add("doge");
 		memesList.add("cute animals");
 		memesList.add("grumpy cat");
-		memesList.add("dat boi");
-		memesList.add("willy wonka");
-		memesList.add("john cena");
-		memesList.add("success kid");
-		memesList.add("john cena");
-		memesList.add("success kid");
+		memesList.add("yee");
+		memesList.add("important videos");
+		memesList.add("the bee movie");
+		memesList.add("we are number one");
+		memesList.add("the legend 27");
+		memesList.add("one does not simply");
 	}
 
 	private void buildPoliticalTopicsList()
@@ -79,7 +79,7 @@ public class Chatbot
 		politicalTopicList.add("American politics");
 		politicalTopicList.add("liberal");
 		politicalTopicList.add("Hillary");
-		politicalTopicList.add("Something political");
+		politicalTopicList.add("@realdonaldtrump");
 		politicalTopicList.add("Something else political");
 		politicalTopicList.add("Last political message");
 	}
