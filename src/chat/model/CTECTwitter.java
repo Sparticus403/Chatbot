@@ -198,8 +198,8 @@ public class CTECTwitter
 		
 		Query query = new Query("Home");
 		query.setCount(100);
-		query.setGeoCode(new GeoLocation(40.597445, -111.791729), 10, Query.KILOMETERS);
-		query.setSince("2016-1-1");
+		query.setGeoCode(new GeoLocation(40.597445, -111.791729), 10, Query.MILES);
+		query.setSince("2016-12-12");
 		try
 		{
 			QueryResult result = chatbotTwitter.search(query);
@@ -213,6 +213,9 @@ public class CTECTwitter
 		{
 			error.printStackTrace();
 		}
+		
+		//query.setMaxId(lastID-1);
+		
 		return results;
 	}
 	
